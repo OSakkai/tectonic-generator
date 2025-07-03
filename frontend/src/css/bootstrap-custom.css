@@ -1,0 +1,176 @@
+/* Bootstrap 5 Custom Overrides for Tectonic Generator */
+
+/* Import Bootstrap CSS */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Custom CSS Variables (overriding Bootstrap defaults) */
+:root {
+  /* Tectonic Generator Color Palette */
+  --primary-blue: #3b82f6;
+  --primary-red: #ef4444;
+  --success-green: #10b981;
+  --warning-orange: #f59e0b;
+  --background-light: #f8fafc;
+  --background-dark: #1e293b;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --border-color: #e2e8f0;
+  --noise-continental: #8B4513;
+  --noise-oceanic: #4169E1;
+  --plate-boundary: #FF0000;
+
+  /* Bootstrap Variable Overrides */
+  --bs-primary: var(--primary-blue);
+  --bs-success: var(--success-green);
+  --bs-warning: var(--warning-orange);
+  --bs-danger: var(--primary-red);
+  --bs-dark: var(--background-dark);
+  --bs-light: var(--background-light);
+  --bs-body-color: var(--text-primary);
+  --bs-secondary-color: var(--text-secondary);
+  --bs-border-color: var(--border-color);
+}
+
+/* Custom Bootstrap Component Styles */
+.btn-tectonic {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+  color: white;
+}
+
+.btn-tectonic:hover {
+  background-color: #2563eb;
+  border-color: #2563eb;
+  color: white;
+}
+
+.card-tectonic {
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.navbar-tectonic {
+  background-color: var(--background-dark) !important;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-dot.connecting {
+  background-color: var(--warning-orange);
+  animation: pulse 2s infinite;
+}
+
+.status-dot.connected {
+  background-color: var(--success-green);
+}
+
+.status-dot.error {
+  background-color: var(--primary-red);
+}
+
+.status-dot.testing {
+  background-color: var(--primary-blue);
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Noise Generation Specific Styles */
+.noise-controls {
+  background-color: var(--background-light);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.canvas-container {
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.parameter-group {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.parameter-group h6 {
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+/* Responsive Canvas */
+.canvas-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Progress Indicators */
+.progress-tectonic {
+  height: 6px;
+  background-color: var(--background-light);
+}
+
+.progress-tectonic .progress-bar {
+  background-color: var(--primary-blue);
+}
+
+/* Export Panel Styles */
+.export-option {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.export-option:hover {
+  border-color: var(--primary-blue);
+  background-color: #f0f9ff;
+}
+
+.export-option.selected {
+  border-color: var(--primary-blue);
+  background-color: #dbeafe;
+}
+
+/* Utilities */
+.text-tectonic-primary {
+  color: var(--text-primary) !important;
+}
+
+.text-tectonic-secondary {
+  color: var(--text-secondary) !important;
+}
+
+.bg-tectonic-light {
+  background-color: var(--background-light) !important;
+}
+
+.bg-tectonic-dark {
+  background-color: var(--background-dark) !important;
+}
+
+.border-tectonic {
+  border-color: var(--border-color) !important;
+}

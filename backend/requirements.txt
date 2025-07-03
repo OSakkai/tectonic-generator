@@ -1,0 +1,11 @@
+Flask==2.3.3
+Flask-CORS==4.0.0
+numpy==1.24.3
+Pillow==10.0.0
+matplotlib==3.7.2
+scipy==1.11.1
+noise==1.2.2
+opensimplex==0.3
+perlin-noise==1.12
+scikit-image==0.21.0
+gunicorn==21.2.0
