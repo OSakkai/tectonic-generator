@@ -4,8 +4,13 @@ from flask_cors import CORS
 import os
 import time
 
-# Import noise generation endpoints (correct local import)
-from noise import generators
+# Import noise generation endpoints
+from noise.generators import (
+    generate_noise_endpoint,
+    generate_perlin_endpoint,
+    generate_simplex_endpoint,
+    generate_worley_endpoint
+)
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -90,25 +95,25 @@ def root():
 @app.route('/api/noise/generate', methods=['POST'])
 def noise_generate():
     """General noise generation endpoint"""
-    return generators.generate_noise_endpoint()
+    return generate_noise_endpoint()
 
 # Perlin noise endpoint
 @app.route('/api/noise/perlin', methods=['POST'])
 def noise_perlin():
     """Perlin noise specific endpoint"""
-    return generators.generate_perlin_endpoint()
+    return generate_perlin_endpoint()
 
 # Simplex noise endpoint
 @app.route('/api/noise/simplex', methods=['POST'])
 def noise_simplex():
     """Simplex noise specific endpoint"""
-    return generators.generate_simplex_endpoint()
+    return generate_simplex_endpoint()
 
 # Worley noise endpoint
 @app.route('/api/noise/worley', methods=['POST'])
 def noise_worley():
     """Worley noise specific endpoint"""
-    return generators.generate_worley_endpoint()
+    return generate_worley_endpoint()
 
 # ============ UTILITY ENDPOINTS ============
 
