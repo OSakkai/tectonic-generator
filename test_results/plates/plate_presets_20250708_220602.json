@@ -1,0 +1,54 @@
+{
+  "data": {
+    "archipelago": {
+      "complexity": "high",
+      "description": "Many small plates",
+      "grid_size": {
+        "height": 250,
+        "width": 250
+      },
+      "max_plates": 30,
+      "min_plates": 20,
+      "plate_sensitivity": 0.08,
+      "wrap_edges": false
+    },
+    "earth_like": {
+      "complexity": "medium",
+      "description": "Earth-like plate distribution",
+      "grid_size": {
+        "height": 150,
+        "width": 150
+      },
+      "max_plates": 15,
+      "min_plates": 10,
+      "plate_sensitivity": 0.15,
+      "wrap_edges": true
+    },
+    "pangaea": {
+      "complexity": "low",
+      "description": "Supercontinent configuration",
+      "grid_size": {
+        "height": 200,
+        "width": 200
+      },
+      "max_plates": 8,
+      "min_plates": 4,
+      "plate_sensitivity": 0.3,
+      "wrap_edges": true
+    },
+    "simple": {
+      "complexity": "low",
+      "description": "Simple plate layout for testing",
+      "grid_size": {
+        "height": 100,
+        "width": 100
+      },
+      "max_plates": 10,
+      "min_plates": 5,
+      "plate_sensitivity": 0.25,
+      "wrap_edges": false
+    }
+  },
+  "message": "Preset configurations for common plate patterns",
+  "success": true
+}

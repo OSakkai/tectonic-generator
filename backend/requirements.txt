@@ -9,3 +9,4 @@ opensimplex==0.3
 perlin-noise==1.12
 scikit-image==0.21.0
 gunicorn==21.2.0
+scipy==1.11.1

@@ -7,6 +7,9 @@ import time
 # Import noise generation endpoints (FIXED - renamed module)
 from tectonic_noise import generators
 
+# Import plate generation endpoints
+from tectonic_plates import plate_endpoints
+
 # Initialize Flask app
 app = Flask(__name__)
 CORS(app)
@@ -41,14 +44,18 @@ def health_check():
         success=True,
         data={
             "status": "healthy", 
-            "version": "1.0.0",
+            "version": "1.1.0",
             "algorithms": ["perlin", "simplex", "worley"],
+            "features": ["noise_generation", "tectonic_plates"],
             "max_resolution": 4096,
             "endpoints": [
                 "/api/noise/generate",
                 "/api/noise/perlin", 
                 "/api/noise/simplex",
-                "/api/noise/worley"
+                "/api/noise/worley",
+                "/api/plates/generate",
+                "/api/plates/parameters",
+                "/api/plates/presets"
             ]
         },
         message="Tectonic Generator Backend is running"
@@ -69,9 +76,10 @@ def test_endpoint():
                 "perlin": "Ready",
                 "simplex": "Ready", 
                 "worley": "Ready"
-            }
+            },
+            "plate_generation": "Ready"
         },
-        message="Backend test successful - All noise algorithms loaded"
+        message="Backend test successful - All systems operational"
     )
 
 # Root endpoint
@@ -80,7 +88,7 @@ def root():
     """Root endpoint"""
     return create_response(
         success=True,
-        data={"service": "Tectonic Generator API", "version": "1.0.0"},
+        data={"service": "Tectonic Generator API", "version": "1.1.0"},
         message="Welcome to Tectonic Generator Backend"
     )
 
@@ -109,6 +117,26 @@ def noise_simplex():
 def noise_worley():
     """Worley noise specific endpoint"""
     return generators.generate_worley_endpoint()
+
+# ============ PLATE GENERATION ENDPOINTS ============
+
+# Generate tectonic plates
+@app.route('/api/plates/generate', methods=['POST'])
+def plates_generate():
+    """Generate tectonic plates from noise map"""
+    return plate_endpoints.generate_plates_endpoint()
+
+# Get plate parameters
+@app.route('/api/plates/parameters', methods=['GET'])
+def plates_parameters():
+    """Get valid parameter ranges for plate generation"""
+    return plate_endpoints.get_plate_parameters()
+
+# Get plate presets
+@app.route('/api/plates/presets', methods=['GET'])
+def plates_presets():
+    """Get preset configurations for plate generation"""
+    return plate_endpoints.get_plate_presets()
 
 # ============ UTILITY ENDPOINTS ============
 
@@ -224,6 +252,9 @@ if __name__ == '__main__':
     print("  - /api/noise/worley (POST)")
     print("  - /api/noise/parameters (GET)")
     print("  - /api/noise/presets (GET)")
+    print("  - /api/plates/generate (POST)")
+    print("  - /api/plates/parameters (GET)")
+    print("  - /api/plates/presets (GET)")
     
     app.run(
         host='0.0.0.0',
