@@ -4,8 +4,8 @@ from flask_cors import CORS
 import os
 import time
 
-# Import noise generation endpoints (correct local import)
-from noise import generators
+# Import noise generation endpoints (FIXED - renamed module)
+from tectonic_noise import generators
 
 # Initialize Flask app
 app = Flask(__name__)
