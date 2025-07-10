@@ -1,0 +1,6 @@
+Module Integrity: FAIL - Cannot access container for testing
+Perlin Valid Parameters: PASS - Accepts valid parameter set
+Perlin Parameter Validation: PASS - Properly rejects invalid scale
+Simplex Valid Parameters: PASS - Accepts valid parameter set
+Worley Valid Parameters: PASS - Accepts valid parameter set
+Worley Distance Validation: FAIL - Does not validate distance metric

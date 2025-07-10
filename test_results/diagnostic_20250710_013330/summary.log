@@ -1,0 +1,19 @@
+Project Identification: PASS - Tectonic Generator project confirmed
+Directory: backend: PASS - Exists
+Directory: frontend: PASS - Exists
+Directory: backend/tectonic_noise: PASS - Exists
+Directory: backend/utils: PASS - Exists
+Project Structure: PASS - All expected directories present
+File: backend/app.py: PASS - Exists
+File: backend/requirements.txt: PASS - Exists
+File: backend/Dockerfile: PASS - Exists
+File: backend/tectonic_noise/__init__.py: PASS - Exists
+File: backend/tectonic_noise/generators.py: PASS - Exists
+File: backend/utils/__init__.py: PASS - Exists
+Backend Container: FAIL - Not running
+Frontend Container: WARN - Not running (may be optional)
+Container Access: FAIL - Cannot access backend container
+API Health Check: PASS - API responding correctly
+Tectonic Noise Imports: FAIL - Import errors detected
+Utils Imports: FAIL - Utils import errors detected
+Dependency: numpy: FAIL - Missing or broken

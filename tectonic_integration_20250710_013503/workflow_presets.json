@@ -1,0 +1,80 @@
+{
+  "data": {
+    "perlin": {
+      "continental": {
+        "lacunarity": 2.5,
+        "octaves": 5,
+        "persistence": 0.6,
+        "scale": 0.02
+      },
+      "detailed": {
+        "lacunarity": 2.8,
+        "octaves": 6,
+        "persistence": 0.7,
+        "scale": 0.1
+      },
+      "oceanic": {
+        "lacunarity": 2.0,
+        "octaves": 3,
+        "persistence": 0.3,
+        "scale": 0.08
+      },
+      "smooth": {
+        "lacunarity": 1.8,
+        "octaves": 2,
+        "persistence": 0.2,
+        "scale": 0.001
+      }
+    },
+    "simplex": {
+      "continental_shelf": {
+        "lacunarity": 2.2,
+        "octaves": 4,
+        "persistence": 0.3,
+        "scale": 0.01
+      },
+      "ridged": {
+        "lacunarity": 2.5,
+        "octaves": 6,
+        "persistence": 0.5,
+        "scale": 0.03
+      },
+      "standard": {
+        "lacunarity": 3.0,
+        "octaves": 5,
+        "persistence": 0.4,
+        "scale": 0.02
+      },
+      "turbulent": {
+        "lacunarity": 3.5,
+        "octaves": 7,
+        "persistence": 0.6,
+        "scale": 0.025
+      }
+    },
+    "worley": {
+      "boundaries": {
+        "cell_type": "F1-F2",
+        "distance_function": "euclidean",
+        "frequency": 0.1
+      },
+      "fractures": {
+        "cell_type": "F1-F2",
+        "distance_function": "chebyshev",
+        "frequency": 0.15
+      },
+      "plates": {
+        "cell_type": "F1",
+        "distance_function": "euclidean",
+        "frequency": 0.08
+      },
+      "volcanic": {
+        "cell_type": "F2",
+        "distance_function": "manhattan",
+        "frequency": 0.2
+      }
+    }
+  },
+  "message": "Preset configurations for common geological patterns",
+  "success": true
+}

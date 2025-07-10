@@ -1,0 +1,9 @@
+Backend Container: FAIL - Not running
+API Readiness: PASS - API responding correctly
+Endpoint: api/health: PASS - HTTP 200
+Endpoint: api/noise/parameters: PASS - HTTP 200
+Endpoint: api/noise/presets: PASS - HTTP 200
+Workflow Step 1: Parameters: PASS - Parameters retrieved successfully
+Parameter Structure: WARN - Limited parameter information
+Workflow Step 2: Presets: PASS - Presets retrieved successfully
+Workflow perlin Generation: PASS - Generated in 0s

@@ -1,0 +1,92 @@
+{
+  "data": {
+    "general": {
+      "max_generation_time": 30,
+      "max_resolution": 4096
+    },
+    "perlin": {
+      "lacunarity": {
+        "default": 2.0,
+        "max": 3.0,
+        "min": 1.5
+      },
+      "octaves": {
+        "default": 4,
+        "max": 6,
+        "min": 1
+      },
+      "persistence": {
+        "default": 0.5,
+        "max": 0.8,
+        "min": 0.1
+      },
+      "scale": {
+        "default": 0.05,
+        "max": 0.1,
+        "min": 0.001
+      },
+      "seed": {
+        "default": null,
+        "max": 999999,
+        "min": 0
+      }
+    },
+    "simplex": {
+      "lacunarity": {
+        "default": 3.0,
+        "max": 4.0,
+        "min": 2.0
+      },
+      "octaves": {
+        "default": 5,
+        "max": 8,
+        "min": 2
+      },
+      "persistence": {
+        "default": 0.4,
+        "max": 0.7,
+        "min": 0.2
+      },
+      "scale": {
+        "default": 0.02,
+        "max": 0.05,
+        "min": 0.005
+      },
+      "seed": {
+        "default": null,
+        "max": 999999,
+        "min": 0
+      }
+    },
+    "worley": {
+      "cell_type": {
+        "default": "F1",
+        "options": [
+          "F1",
+          "F2",
+          "F1-F2"
+        ]
+      },
+      "distance_function": {
+        "default": "euclidean",
+        "options": [
+          "euclidean",
+          "manhattan",
+          "chebyshev"
+        ]
+      },
+      "frequency": {
+        "default": 0.1,
+        "max": 0.5,
+        "min": 0.05
+      },
+      "seed": {
+        "default": null,
+        "max": 999999,
+        "min": 0
+      }
+    }
+  },
+  "message": "Parameter specifications for all noise algorithms",
+  "success": true
+}

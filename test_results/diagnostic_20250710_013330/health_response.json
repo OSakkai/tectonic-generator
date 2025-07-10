@@ -1,0 +1,27 @@
+{
+  "data": {
+    "algorithms": [
+      "perlin",
+      "simplex",
+      "worley"
+    ],
+    "endpoints": [
+      "/api/noise/generate",
+      "/api/noise/perlin",
+      "/api/noise/simplex",
+      "/api/noise/worley",
+      "/api/plates/generate",
+      "/api/plates/parameters",
+      "/api/plates/presets"
+    ],
+    "features": [
+      "noise_generation",
+      "tectonic_plates"
+    ],
+    "max_resolution": 4096,
+    "status": "healthy",
+    "version": "1.1.0"
+  },
+  "message": "Tectonic Generator Backend is running",
+  "success": true
+}
